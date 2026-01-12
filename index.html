@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ulises Lemus | Portfolio</title>
+  <meta name="description" content="Data analytics portfolio by Ulises Lemus" />
+  <style>
+    :root{
+      --bg:#0f1115;
+      --panel:#151925;
+      --panel2:#111522;
+      --text:#e7e9ee;
+      --muted:#aab0bf;
+      --accent:#6ea8fe;
+      --border:rgba(255,255,255,.08);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius:16px;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 20% -10%, #1a2340 0%, transparent 50%),
+                  radial-gradient(900px 700px at 110% 10%, #22203a 0%, transparent 45%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit; text-decoration:none}
+    a:hover{color:var(--accent)}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 20px 60px;}
+    header{
+      display:flex; align-items:flex-start; justify-content:space-between;
+      gap:18px; margin-top:10px; margin-bottom:26px;
+    }
+    .brand h1{
+      font-size:40px; letter-spacing:-.02em; margin:0 0 6px;
+      font-weight:800;
+    }
+    .brand p{margin:0; color:var(--muted); max-width:60ch}
+    nav{
+      display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end;
+      font-size:14px; color:var(--muted);
+    }
+    nav a{padding:8px 10px; border:1px solid transparent; border-radius:999px}
+    nav a:hover{border-color:var(--border); background:rgba(255,255,255,.04); color:var(--text)}
+    .pillrow{display:flex; gap:10px; flex-wrap:wrap; margin:16px 0 8px}
+    .pill{
+      font-size:12px; color:var(--muted);
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      padding:6px 10px; border-radius:999px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:16px;
+      margin-top:18px;
+    }
+    .card{
+      grid-column: span 6;
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px 18px 16px;
+      position:relative;
+      overflow:hidden;
+      min-height:170px;
+    }
+    .card:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(600px 200px at 20% 0%, rgba(110,168,254,.15), transparent 60%),
+                  radial-gradient(600px 200px at 90% 20%, rgba(174,129,255,.12), transparent 60%);
+      pointer-events:none;
+      opacity:.9;
+    }
+    .card > *{position:relative}
+    .meta{font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+    .title{font-size:18px; margin:10px 0 8px; font-weight:750}
+    .desc{margin:0 0 14px; color:var(--muted)}
+    .links{display:flex; gap:12px; flex-wrap:wrap; font-size:13px}
+    .link{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 10px; border-radius:10px;
+      border:1px solid var(--border);
+      background:rgba(0,0,0,.12);
+      color:var(--text);
+    }
+    .link:hover{border-color:rgba(110,168,254,.45); color:var(--text)}
+    .section{
+      margin-top:34px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:10px;
+    }
+    .section h2{margin:0; font-size:18px}
+    .footer{margin-top:38px; color:var(--muted); font-size:13px}
+    @media (max-width: 900px){
+      header{flex-direction:column}
+      nav{justify-content:flex-start}
+      .card{grid-column: span 12;}
+      .brand h1{font-size:34px}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <h1>Ulises Lemus</h1>
+        <p>MBA Analytics student building data analytics projects with Python, SQL, and Power BI.</p>
+        <div class="pillrow">
+          <span class="pill">Python</span>
+          <span class="pill">SQL</span>
+          <span class="pill">Power BI</span>
+          <span class="pill">EDA • Dashboards • Storytelling</span>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Links</a>
+      </nav>
+    </header>
+
+    <section id="projects">
+      <div class="grid">
+
+        <article class="card">
+          <div class="meta">Data Analytics • Python</div>
+          <div class="title">Online Retail Revenue Analysis</div>
+          <p class="desc">
+            Exploratory analysis of transaction data to understand revenue drivers, repeat customers, and product performance.
+          </p>
+          <div class="links">
+            <a class="link" href="https://github.com/uliseslemus/online-retail-eda" target="_blank" rel="noreferrer">View on GitHub ↗</a>
+            <a class="link" href="#" target="_blank" rel="noreferrer">Dashboard (Power BI) ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="meta">Data Visualization • Power BI</div>
+          <div class="title">Customer & Returns Dashboard</div>
+          <p class="desc">
+            Executive-style dashboard highlighting revenue concentration, repeat behavior, and return patterns.
+          </p>
+          <div class="links">
+            <a class="link" href="#" target="_blank" rel="noreferrer">View Dashboard ↗</a>
+            <a class="link" href="#" target="_blank" rel="noreferrer">Write-up ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="meta">SQL • EDA</div>
+          <div class="title">SQL Analytics Project (Coming Soon)</div>
+          <p class="desc">
+            SQL-driven analysis focused on business questions, patterns, and clean reporting queries.
+          </p>
+          <div class="links">
+            <a class="link" href="https://github.com/uliseslemus" target="_blank" rel="noreferrer">GitHub Profile ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="meta">Machine Learning • (Optional)</div>
+          <div class="title">Predictive Project (Placeholder)</div>
+          <p class="desc">
+            Later: repeat purchase / churn prediction with a clear business framing and evaluation.
+          </p>
+          <div class="links">
+            <a class="link" href="#" target="_blank" rel="noreferrer">Repo ↗</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p style="margin:0; color:var(--muted); max-width:80ch;">
+        I’m transitioning into analytics and focusing on projects that mirror real business work:
+        cleaning messy data, answering clear questions, and communicating insights through visuals.
+      </p>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Links</h2>
+      <div class="links">
+        <a class="link" href="https://github.com/uliseslemus" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <a class="link" href="https://www.linkedin.com/in/ulises-lemus-b39030216/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        <a class="link" href="#" target="_blank" rel="noreferrer">Resume (PDF) ↗</a>
+      </div>
+    </section>
+
+    <div class="footer">
+      © <span id="y"></span> Ulises Lemus • Built with GitHub Pages
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
